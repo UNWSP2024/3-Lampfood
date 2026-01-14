@@ -1,23 +1,26 @@
-# Write a program that asks the user to enter a person's age.  The program should display a message indicating whether the person is an infant, a child, a teenager, or an adult.  Following are the guidelines:
+#Elliott Morris, 1/14/2026, Age Classifier
+#This program asks for an age and categorizes it based on an if-elif tree
 
-# If the person is 1 year old or less, it should display "infant" (without quotes).
-# If the person is older than 1 year, but younger than 13 years, it should display "child".
-# If the person is at least 13 years old, but less than 20 years old, it should display "teenager".
-# If the person is at least 20 year old, it should display "adult".
-
+#function to categorize the age
 def categorize_age(age):
+    # placeholder variable
     ageCategory = "TBD"
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
 
+    #decision structure to find age
+    if age < 0 or age > 100:
+        ageCategory = "Invalid age"
+    elif age > 0 and age <= 1:
+        ageCategory = "Infant"
+    elif age > 1 and age < 13:
+        ageCategory = "Child"
+    elif age >= 13 and age < 20:
+        ageCategory = "Teenager"
+    elif age >= 20 and age < 100:
+        ageCategory = "Adult"
 
     return ageCategory
 
-
-#### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
-#### charge logic in the weight_conversion function
+#Main script
 if __name__ == '__main__':
     # Local variables
     # Get age from the user.
