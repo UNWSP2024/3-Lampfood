@@ -1,4 +1,4 @@
-# Programming Excersize 3-13
+#Elliott Morris, 1/19/2026, Weight categorizer
 
 # The Fast Freight Shipping Company charges the following rates:
 
@@ -12,14 +12,24 @@
 def weight_conversion(weight):
     # Calculate the shipping charge.
     shippingCost = 0.0
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
-    
+
+    #determine the weight class
+    if weight > 0 and weight <= 2: #check to remove negative numbers
+        shippingCost = weight * 1.5
+    elif weight > 2 and weight <= 6:
+        shippingCost = weight * 3
+    elif weight > 6 and weight <= 10:
+        shippingCost = weight * 4
+    elif weight > 10:
+        shippingCost = weight * 4.75
+    else:
+        print("Please enter a valid weight.")
+
     return shippingCost
 
+
 #### This piece of the code has been done for you,
-#### you only need to worry about the actual shipping 
+#### you only need to worry about the actual shipping
 #### charge logic in the weight_conversion function
 if __name__ == '__main__':
     # Local variables
@@ -29,4 +39,4 @@ if __name__ == '__main__':
     weight = float(input('Enter the weight of the package: '))
     # Display the shipping charge.
     shippingCost = weight_conversion(weight)
-    print ('Shipping charge: $', format(shippingCost, '.2f'))
+    print('Shipping charge: $', format(shippingCost, '.2f'))
