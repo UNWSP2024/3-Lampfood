@@ -10,13 +10,13 @@ def categorize_age(age):
     if age < 0 or age > 100:
         ageCategory = "Invalid age"
     elif age > 0 and age <= 1:
-        ageCategory = "Infant"
+        ageCategory = "infant"
     elif age > 1 and age < 13:
-        ageCategory = "Child"
+        ageCategory = "child"
     elif age >= 13 and age < 20:
-        ageCategory = "Teenager"
+        ageCategory = "teenager"
     elif age >= 20 and age < 100:
-        ageCategory = "Adult"
+        ageCategory = "adult"
 
     return ageCategory
 
